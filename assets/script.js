@@ -141,3 +141,16 @@ $('#js-black-bg').click(function() {
 
 })   //！！右側カートサイドバーを使うときの記載！！
 
+//数量カウンター
+$('.qtybox .btnqty').on('click', function(){
+	var qty = parseInt($(this).parent('.qtybox').find('.quantity-input').val());
+	if($(this).hasClass('qtyplus')) {
+	  qty++;
+	}else {
+	  if(qty > 1) {
+		qty--;
+	  }
+	}
+	qty = (isNaN(qty))?1:qty;
+	$(this).parent('.qtybox').find('.quantity-input').val(qty);
+  }); 
