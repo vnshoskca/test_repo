@@ -3,19 +3,21 @@
   <div class="collection-wrap flex">
 
     {% assign collection = collections[section.settings.toppage_collection] %}
-    {% for product in collection.products %}
-      <a href="{{ product.url }}" class="product_card">
-        <img src="{{ product.featured_image.src | img_url: '3000x' }}" alt="">
-        <h3>{{ product.title }}
-        </h3>
-        <p class="price">{{ product.price | money }}
-        </p>
-        <p class="Btn bgleft">
-          <span>詳細を見る</span>
-        </p>
-      </a>
-    {% endfor %}
+    {%  paginate collection.products by 4 %}
 
+      {% for product in collection.products %}
+        <a href="{{ product.url }}" class="product_card">
+          <img src="{{ product.featured_image.src | img_url: '3000x' }}" alt="">
+          <h3>{{ product.title }}
+          </h3>
+          <p class="price">{{ product.price | money }}
+          </p>
+          <p class="Btn bgleft">
+            <span>詳細を見る</span>
+          </p>
+        </a>
+      {% endfor %}
+    {% endpaginate %}
 
     {%- comment -%}
       <a href="#" class="product_card">
