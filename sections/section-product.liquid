@@ -36,16 +36,16 @@
           </div>
         </div>
 
-        <input type="hidden" name="id" value={{ product.varinats.first.id }}>
+        <input type="hidden" name="id" value={{ product.variants.first.id }}>
 
-        {% assign current_variant = product.selected_or_first_available_varinat %}
-        {% if current_varinat.inventory_quantity > 0 %}
+        {% assign current_variant = product.selected_or_first_available_variant %}
+        {% if current_variant.inventory_quantity > 0 %}
 
           <button href="#" class="Btn02 bgleft02">
             <span>カートに追加する</span>
           </button>
-          {% if current_varinat.inventory_quantity < 10 %}
-            <span style="color: ;red;">残り在庫{{ current_varinat.inventory_quantity }}
+          {% if current_variant.inventory_quantity < 10 %}
+            <span style="color: red;">残り在庫{{ current_variant.inventory_quantity }}
               個です
             </span>
           {% endif %}
