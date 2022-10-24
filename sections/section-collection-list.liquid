@@ -2,7 +2,7 @@
   <div class="items-wrapper flex">
 
     {% for block in section.blocks %}
-      {% assign collection = block.settings.collection %}
+      {% assign collection = block.settings.toppage_collection %}
 
       <a href="{{ collection.url }}" class="item" style="background-image: url({{ collection.image | image_url }});">
         <div class="item__content">
