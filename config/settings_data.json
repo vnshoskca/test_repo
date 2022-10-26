@@ -129,7 +129,7 @@
             "type": "announcement",
             "settings": {
               "text": "Welcome to our store",
-              "text_alignment": "center",
+              "text_alignment": "left",
               "color_scheme": "background-1",
               "link": ""
             }
