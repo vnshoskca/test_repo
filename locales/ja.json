@@ -373,6 +373,7 @@
       "title": "アカウントを作成する",
       "first_name": "名",
       "last_name": "姓",
+      "birthday": "誕生日",
       "email": "メール",
       "password": "パスワード",
       "submit": "作成する"

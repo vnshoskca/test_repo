@@ -666,6 +666,9 @@
         "show_vendor": {
           "label": "販売元を表示する"
         },
+        "show_ranking": {
+          "label": "ランキングを表示する"
+        },
         "show_rating": {
           "label": "商品の評価を表示",
           "info": "評価を表示するには、商品評価アプリを追加します。[詳しくはこちら](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#featured-collection-show-product-rating)"
