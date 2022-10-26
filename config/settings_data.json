@@ -234,7 +234,7 @@
       "section-product": {
         "type": "section-product",
         "settings": {
-          "toppage_product": ""
+          "toppage_product": "daily-air-max"
         }
       },
       "section-collection-list": {
@@ -255,6 +255,21 @@
       },
       "footer-custom": {
         "type": "footer-custom",
+        "settings": {
+        }
+      },
+      "section-about": {
+        "type": "section-about",
+        "settings": {
+        }
+      },
+      "section-special": {
+        "type": "section-special",
+        "settings": {
+        }
+      },
+      "section-category": {
+        "type": "section-category",
         "settings": {
         }
       }
