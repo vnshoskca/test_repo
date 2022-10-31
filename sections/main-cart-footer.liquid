@@ -8,10 +8,8 @@
     <div class="cart__footer">
       {%- if settings.show_cart_note -%}
         <cart-note class="cart__note field">
-          <label for="Cart-note">{{ 'sections.cart.note' | t }}
-          </label>
-          <textarea class="text-area field__input" name="note" form="cart" id="Cart-note" placeholder="{{ 'sections.cart.note' | t }}">{{ cart.note }}
-          </textarea>
+          <label for="Cart-note">{{ 'sections.cart.note' | t }}</label>
+          <textarea class="text-area field__input" name="note" form="cart" id="Cart-note" placeholder="{{ 'sections.cart.note' | t }}">{{ cart.note }}</textarea>
         </cart-note>
       {%- endif -%}
 
@@ -23,10 +21,8 @@
             {%- when 'subtotal' -%}
               <div class="js-contents" {{ block.shopify_attributes }}>
                 <div class="totals">
-                  <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}
-                  </h2>
-                  <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}
-                  </p>
+                  <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
+                  <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
                 </div>
 
                 <div>
@@ -36,8 +32,7 @@
                         <li class="discounts__discount discounts__discount--position">
                           {%- render 'icon-discount' -%}
                           {{ discount.title }}
-                          (-{{ discount.total_allocated_amount | money }}
-                          )
+                          (-{{ discount.total_allocated_amount | money }})
                         </li>
                       {%- endfor -%}
                     </ul>
@@ -57,22 +52,6 @@
                 </small>
               </div>
             {%- else -%}
-
-              {%- assign flg_check = false -%}
-              {%- for item in cart.items -%}
-                {%- if flg_check == false -%}
-                  {%- for collection in item.product.collections -%}
-                    {%- if collection.title == "キッズ" -%}
-                      <div class="cart__check">
-                        <input type="checkbox" id="cart_check" value="1">
-                        <label for="cart_check">子供靴が含まれていますが、お間違えはありませんか？</label>
-                      </div>
-                      {%- assign flg_check = true -%}
-                    {%- endif -%}
-                  {%- endfor -%}
-                {%- endif -%}
-              {%- endfor -%}
-
               <div class="cart__ctas" {{ block.shopify_attributes }}>
                 <noscript>
                   <button type="submit" class="cart__update-button button button--secondary" form="cart">
@@ -80,7 +59,7 @@
                   </button>
                 </noscript>
 
-                <button type="submit" id="checkout" class="cart__checkout-button button" name="checkout" {% if cart == empty %} disabled{% endif %} form="cart">
+                <button type="submit" id="checkout" class="cart__checkout-button button" name="checkout"{% if cart == empty %} disabled{% endif %} form="cart">
                   {{ 'sections.cart.checkout' | t }}
                 </button>
               </div>
@@ -106,15 +85,10 @@
       const msie = ua.indexOf('MSIE ');
       const trident = ua.indexOf('Trident/');
 
-      return(msie > 0 || trident > 0);
+      return (msie > 0 || trident > 0);
     }
 
-    if (! isIE()) 
-      return;
-    
-
-
-
+    if (!isIE()) return;
     const cartSubmitInput = document.createElement('input');
     cartSubmitInput.setAttribute('name', 'checkout');
     cartSubmitInput.setAttribute('type', 'hidden');
@@ -126,21 +100,23 @@
 </script>
 
 {% schema %}
-  {
-    "name": "t:sections.main-cart-footer.name",
-    "class": "cart__footer-wrapper",
-    "blocks": [
-      {
-        "type": "subtotal",
-        "name": "t:sections.main-cart-footer.blocks.subtotal.name",
-        "limit": 1
-      }, {
-        "type": "buttons",
-        "name": "t:sections.main-cart-footer.blocks.buttons.name",
-        "limit": 1
-      }, {
-        "type": "@app"
-      }
-    ]
-  }
+{
+  "name": "t:sections.main-cart-footer.name",
+  "class": "cart__footer-wrapper",
+  "blocks": [
+    {
+      "type": "subtotal",
+      "name": "t:sections.main-cart-footer.blocks.subtotal.name",
+      "limit": 1
+    },
+    {
+      "type": "buttons",
+      "name": "t:sections.main-cart-footer.blocks.buttons.name",
+      "limit": 1
+    },
+    {
+      "type": "@app"
+    }
+  ]
+}
 {% endschema %}
