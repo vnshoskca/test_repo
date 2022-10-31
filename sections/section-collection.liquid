@@ -5,7 +5,7 @@
     {% assign collection = collections[section.settings.toppage_collection] %}
     {% for product in collection.products %}
       <a href="{{ product.url }}" class="product_card">
-        <img src="{{ product.featured_image.src | asset_img_url: '3000x' }}" alt="">
+        <img src="{{ product.featured_image.src | img_url: '3000x' }}" alt="">
         <h3>{{ product.title }}</h3>
         <p class="price">{{ product.price | money }}</p>
         <p class="Btn bgleft">
