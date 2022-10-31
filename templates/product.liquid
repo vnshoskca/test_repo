@@ -1,0 +1,100 @@
+<main class="product">
+
+
+  <section class="sec sec03">
+    <div class="popular_product flex">
+      <div class="product__post">
+
+        <div class="ProductImage">
+
+          <ul class="gallery">
+            {% for image in product.images %}
+              <li><img src="{{ image.src | img_url | 'large' }}" alt=""></li>
+            {% endfor %}
+          </ul>
+          <ul class="choice-btn flex slideItemImage">
+            {% for image in product.images %}
+              <li><img src="{{ image.src | img_url | 'large' }}" alt=""></li>
+            {% endfor %}
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="product__detail">
+        <div class="product__detail__stickey">
+
+          <div class="product__detail__main">
+            <p class="maison">{{ product.vendor }}</p>
+            <h2>{{ product.title }}</h2>
+            <p class="price">{{ product.price | money }}</p>
+          </div>
+          <div class="product__detail__text">
+            <p>{{ product.content }}</p>
+          </div>
+          {%- comment -%}
+            <div class="share flex">
+            <p class="mini">シェア</p>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            </div>
+          {%- endcomment -%}
+          <form action="#" class="product__wrap">
+            <label for="#">お渡し用袋</label>
+            <select name="" id="">
+              <option value="不要">不要</option>
+              <option value="要">要</option>
+            </select>
+          </form>
+
+          <form action="post"></form>
+
+          <p class="alert">あと<span>7時間0分</span>以内のご注文確定で3月02日（水）〜3月03日(木)の間に商品を受け取る</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="recommend sec">
+    <h2>おすすめ商品</h2>
+    <div class="collection-wrap flex">
+      <a href="#" class="product_card">
+        <img src="img/new/product-3.webp" alt="">
+        <h3>商品3</h3>
+        <p class="price">¥2,592</p>
+        <p class="Btn bgleft">
+          <span>詳細を見る</span>
+        </p>
+      </a>
+      <a href="#" class="product_card">
+        <img src="img/new/product-3.webp" alt="">
+        <h3>商品3</h3>
+        <p class="price">¥2,592</p>
+        <p class="Btn bgleft">
+          <span>詳細を見る</span>
+        </p>
+      </a>
+      <a href="#" class="product_card">
+        <img src="img/new/product-3.webp" alt="">
+        <h3>商品3</h3>
+        <p class="price">¥2,592</p>
+        <p class="Btn bgleft">
+          <span>詳細を見る</span>
+        </p>
+      </a>
+      <a href="#" class="product_card">
+        <img src="img/new/product-3.webp" alt="">
+        <h3>商品3</h3>
+        <p class="price">¥2,592</p>
+        <p class="Btn bgleft">
+          <span>詳細を見る</span>
+        </p>
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
