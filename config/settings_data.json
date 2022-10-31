@@ -214,69 +214,8 @@
         "settings": {
           "color_scheme": "background-1"
         }
-      },
-      "header-custom": {
-        "type": "header-custom",
-        "settings": {
-        }
-      },
-      "section-slideshow": {
-        "type": "section-slideshow",
-        "settings": {
-        }
-      },
-      "section-collection": {
-        "type": "section-collection",
-        "settings": {
-          "toppage_collection": ""
-        }
-      },
-      "section-product": {
-        "type": "section-product",
-        "settings": {
-          "toppage_product": "daily-air-max-ladys"
-        }
-      },
-      "section-collection-list": {
-        "type": "section-collection-list",
-        "blocks": {
-          "f4c01922-8e95-4fb0-a604-968c86fdce2e": {
-            "type": "featured_collection",
-            "settings": {
-              "toppage_collection": "mens"
-            }
-          }
-        },
-        "block_order": [
-          "f4c01922-8e95-4fb0-a604-968c86fdce2e"
-        ],
-        "settings": {
-        }
-      },
-      "footer-custom": {
-        "type": "footer-custom",
-        "settings": {
-        }
-      },
-      "section-about": {
-        "type": "section-about",
-        "settings": {
-        }
-      },
-      "section-special": {
-        "type": "section-special",
-        "settings": {
-        }
-      },
-      "section-category": {
-        "type": "section-category",
-        "settings": {
-        }
       }
-    },
-    "content_for_index": [
-
-    ]
+    }
   },
   "presets": {
     "Default": {
