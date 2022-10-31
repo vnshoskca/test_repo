@@ -214,8 +214,32 @@
         "settings": {
           "color_scheme": "background-1"
         }
+      },
+      "header-custom": {
+        "type": "header-custom",
+        "settings": {
+        }
+      },
+      "section-slideshow": {
+        "type": "section-slideshow",
+        "settings": {
+        }
+      },
+      "section-collection": {
+        "type": "section-collection",
+        "settings": {
+          "toppage_collection": "womens"
+        }
+      },
+      "footer-custom": {
+        "type": "footer-custom",
+        "settings": {
+        }
       }
-    }
+    },
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Default": {
