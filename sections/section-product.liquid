@@ -13,21 +13,58 @@
         <p class="price">{{ product.price | money }}</p>
       </div>
       <div class="product__detail__text">
-        <p>{{product.content }}</p>
+        <p>{{ product.content }}</p>
       </div>
-      <div class="counter">
+
+      <form method="post" action="/cart/add" enctype="multipart/form-data">
+
+        <div class="qtydiv counter">
+          <div class="qtybox">
+            <span class="btnqty qtyminus icon icon-minus">
+              <i class="fas fa-minus"></i>
+            </span>
+            <span><input type="text" id="quantity" name="quantity" value="1" min="1" class="quantity-selector quantity-input" readonly=""></span>
+            <span class="btnqty qtyplus icon icon-plus">
+              <i class="fas fa-plus"></i>
+            </span>
+          </div>
+        </div>
+
+        <input type="hidden" name="id" value={{ product.variants.first.id }}>
+
+        {% assign current_varinat = product.selected_or_first_available_variant %}
+        {% if current_variant.inventory_quantity > 0 %}
+          <button href="#" class="Btn02 bgleft02">
+            <span>カートに追加する</span>
+          </button>
+          {% if current_variant.inventory_quantity < 10 %}
+            <span style="color: red;">残り在庫{{ current_variant.inventory_quantity }}個です</span>
+          {% endif %}
+        {% else %}
+          <div class="Btn02">
+            <span>在庫なし</span>
+          </div>
+        {% endif %}
+
+      </form>
+
+      <a href="{{ product.url }}" class="link__detail">詳細を見る</a>
+
+      {%- comment -%}
+        <div class="counter">
         <span>
-          <i class="fas fa-minus"></i>
+        <i class="fas fa-minus"></i>
         </span>
         <span>1</span>
         <span>
-          <i class="fas fa-plus"></i>
+        <i class="fas fa-plus"></i>
         </span>
-      </div>
-      <button href="#" class="Btn02 bgleft02">
+        </div>
+        <button href="#" class="Btn02 bgleft02">
         <span>カートに追加する</span>
-      </button>
-      <a href="/product.html" class="link__detail">詳細を見る</a>
+        </button>
+        <a href="/product.html" class="link__detail">詳細を見る</a>
+      {%- endcomment -%}
     </div>
 
     {%- comment -%}
