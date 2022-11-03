@@ -108,7 +108,9 @@
         <i class="fas fa-shopping-cart"></i>
       </a>
     </li>
-    <span>{{ cart.item_count }}</span>
+    {% if cart.item_count > 0 %}
+      <span>{{ cart.item_count }}</span>
+    {% endif %}
   </ul>
   <div class="black_bg" id="js-black-bg"></div>
   <!--カートのサイドバー-->
