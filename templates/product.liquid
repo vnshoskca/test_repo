@@ -1,6 +1,5 @@
 <main class="product">
 
-
   <section class="sec sec03">
     <div class="popular_product flex">
       <div class="product__post">
@@ -18,12 +17,10 @@
             {% endfor %}
           </ul>
         </div>
-
       </div>
 
       <div class="product__detail">
         <div class="product__detail__stickey">
-
           <div class="product__detail__main">
             <p class="maison">{{ product.vendor }}</p>
             <h2>{{ product.title }}</h2>
@@ -32,6 +29,7 @@
           <div class="product__detail__text">
             <p>{{ product.content }}</p>
           </div>
+
           {%- comment -%}
             <div class="share flex">
             <p class="mini">シェア</p>
@@ -40,17 +38,54 @@
             <a href="#"></a>
             </div>
           {%- endcomment -%}
-          <form action="#" class="product__wrap">
+
+          {%- comment -%}
+            <form action="#" class="product__wrap">
             <label for="#">お渡し用袋</label>
             <select name="" id="">
-              <option value="不要">不要</option>
-              <option value="要">要</option>
+            <option value="不要">不要</option>
+            <option value="要">要</option>
             </select>
+            </form>
+          {%- endcomment -%}
+
+          <form method="post" action="/cart/add" enctype="multipart/form-data" class="product__wrap">
+
+            <label for="#">お渡し用袋</label>
+            <select name="" id="">
+              {% for variant in product.variants %}
+                <option value="{{ variant.id }}">{{ variant.title }}</option>
+              {% endfor %}
+            </select>
+
+            <div class="qtydiv counter">
+              <div class="qtybox">
+                <span class="btnqty qtyminus icon icon-minus">
+                  <i class="fas fa-minus"></i>
+                </span>
+                <span><input type="text" id="quantity" name="quantity" value="1" min="1" class="quantity-selector quantity-input" readonly=""></span>
+                <span class="btnqty qtyplus icon icon-plus">
+                  <i class="fas fa-plus"></i>
+                </span>
+              </div>
+            </div>
+            <input type="hidden" name="id" value={{ product.variants.first.id }}>
+            {% assign current_variant = product.selected_or_first_available_variant %}
+            {% if current_variant.inventory_quantity > 0 %}
+              <button href="#" class="Btn02 bgleft02">
+                <span>カートに追加する</span>
+              </button>
+              {% if current_variant.inventory_quantity < 10 %}
+                <span style="color: red;">残り在庫{{ current_variant.inventory_quantity }}個です</span>
+              {% endif %}
+            {% else %}
+              <div class="Btn02">
+                <span>在庫なし</span>
+              </div>
+            {% endif %}
           </form>
 
-          <form action="post"></form>
-
-          <p class="alert">あと<span>7時間0分</span>以内のご注文確定で3月02日（水）〜3月03日(木)の間に商品を受け取る</p>
+          <p class="alert">あと<span>7時間0分</span>以内のご注文確定で{{ 'today' | date: '%m月%d日' }}〜{{ 'today' | date: '%s' | plus: 86400 | date: '%m月%d日' }}の間に商品を受け取る</p>
         </div>
       </div>
     </div>
@@ -59,42 +94,8 @@
 
   <section class="recommend sec">
     <h2>おすすめ商品</h2>
-    <div class="collection-wrap flex">
-      <a href="#" class="product_card">
-        <img src="img/new/product-3.webp" alt="">
-        <h3>商品3</h3>
-        <p class="price">¥2,592</p>
-        <p class="Btn bgleft">
-          <span>詳細を見る</span>
-        </p>
-      </a>
-      <a href="#" class="product_card">
-        <img src="img/new/product-3.webp" alt="">
-        <h3>商品3</h3>
-        <p class="price">¥2,592</p>
-        <p class="Btn bgleft">
-          <span>詳細を見る</span>
-        </p>
-      </a>
-      <a href="#" class="product_card">
-        <img src="img/new/product-3.webp" alt="">
-        <h3>商品3</h3>
-        <p class="price">¥2,592</p>
-        <p class="Btn bgleft">
-          <span>詳細を見る</span>
-        </p>
-      </a>
-      <a href="#" class="product_card">
-        <img src="img/new/product-3.webp" alt="">
-        <h3>商品3</h3>
-        <p class="price">¥2,592</p>
-        <p class="Btn bgleft">
-          <span>詳細を見る</span>
-        </p>
-      </a>
+    {% section 'section-collection' %}
 
-    </div>
 
   </section>
-
 </main>
