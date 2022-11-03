@@ -4,7 +4,7 @@
     {% for block in section.blocks %}
       {% assign collection = block.settings.toppage_collection %}
 
-      <a href="{{ collection.url }}" class="item">
+      <a href="{{ collection.url }}" class="item" style="background-image: url({{ collection.image | image_url }});">
         <div class="item__content">
           <h3>NEW COLLECTION</h3>
           <div class="Btn bgleft bgleft03">
