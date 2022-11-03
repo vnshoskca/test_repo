@@ -32,7 +32,7 @@
 
         <input type="hidden" name="id" value={{ product.variants.first.id }}>
 
-        {% assign current_varinat = product.selected_or_first_available_variant %}
+        {% assign current_variant = product.selected_or_first_available_variant %}
         {% if current_variant.inventory_quantity > 0 %}
           <button href="#" class="Btn02 bgleft02">
             <span>カートに追加する</span>
