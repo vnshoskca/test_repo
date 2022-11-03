@@ -2,63 +2,65 @@
   <div class="items-wrapper flex">
 
     {% for block in section.blocks %}
-    {% assign collection = block.settings.toppage_collection %}
+      {% assign collection = block.settings.toppage_collection %}
 
-<a href="{{ collection.url }}" class="item"></a>
-<div class="item__content">
-        <h3>NEW COLLECTION</h3>
-        <div class="Btn bgleft bgleft03">
-          <span>もっと見る</span>
+      <a href="{{ collection.url }}" class="item">
+        <div class="item__content">
+          <h3>NEW COLLECTION</h3>
+          <div class="Btn bgleft bgleft03">
+            <span>もっと見る</span>
+          </div>
         </div>
-      </div>
       </a>
 
     {% endfor %}
 
-    {%- comment -%} <a href="product.html" class="item">
+    {%- comment -%}
+      <a href="product.html" class="item">
       <div class="item__content">
-        <h3>NEW COLLECTION</h3>
-        <div class="Btn bgleft bgleft03">
-          <span>もっと見る</span>
-        </div>
+      <h3>NEW COLLECTION</h3>
+      <div class="Btn bgleft bgleft03">
+      <span>もっと見る</span>
       </div>
-    </a>
+      </div>
+      </a>
 
-    <a href="product.html" class="item">
+      <a href="product.html" class="item">
       <div class="item__content">
-        <h3>NEW COLLECTION</h3>
-        <div class="Btn bgleft bgleft03">
-          <span>もっと見る</span>
-        </div>
+      <h3>NEW COLLECTION</h3>
+      <div class="Btn bgleft bgleft03">
+      <span>もっと見る</span>
       </div>
-    </a>
+      </div>
+      </a>
 
-    <a href="product.html" class="item">
+      <a href="product.html" class="item">
       <div class="item__content">
-        <h3>NEW COLLECTION</h3>
-        <div class="Btn bgleft bgleft03">
-          <span>もっと見る</span>
-        </div>
+      <h3>NEW COLLECTION</h3>
+      <div class="Btn bgleft bgleft03">
+      <span>もっと見る</span>
       </div>
-    </a>
+      </div>
+      </a>
 
-    <a href="product.html" class="item">
+      <a href="product.html" class="item">
       <div class="item__content">
-        <h3>NEW COLLECTION</h3>
-        <div class="Btn bgleft bgleft03">
-          <span>もっと見る</span>
-        </div>
+      <h3>NEW COLLECTION</h3>
+      <div class="Btn bgleft bgleft03">
+      <span>もっと見る</span>
       </div>
-    </a>
+      </div>
+      </a>
 
-    <a href="product.html" class="item">
+      <a href="product.html" class="item">
       <div class="item__content">
-        <h3>NEW COLLECTION</h3>
-        <div class="Btn bgleft bgleft03">
-          <span>もっと見る</span>
-        </div>
+      <h3>NEW COLLECTION</h3>
+      <div class="Btn bgleft bgleft03">
+      <span>もっと見る</span>
       </div>
-    </a> {%- endcomment -%}
+      </div>
+      </a>
+    {%- endcomment -%}
 
   </div>
 </section>
