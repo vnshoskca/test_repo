@@ -235,6 +235,12 @@
         "type": "footer-custom",
         "settings": {
         }
+      },
+      "section-product": {
+        "type": "section-product",
+        "settings": {
+          "toppage_product": "daily-air-max-ladys"
+        }
       }
     },
     "content_for_index": [
