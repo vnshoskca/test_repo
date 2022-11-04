@@ -1,6 +1,6 @@
 {%- comment -%} <section class="2022_new_collection sec">
   <h2>2022 NEW COLLECTION "APPLAUSE"</h2> {%- endcomment -%}
-  
+
   <div class="collection-wrap flex">
 
     {% assign collection = collections[section.settings.toppage_collection] %}
@@ -54,7 +54,7 @@
 
   </div>
 
-  <a href="#" class="Btn02 bgleft02">
+  <a href="{{ collection.url }}" class="Btn02 bgleft02">
     <span>もっと見る</span>
   </a>
 
@@ -62,7 +62,7 @@
 
 {% schema %}
   {
-    "name": "Toppage Collection",
+    "name": "Collection",
     "settings": [
       {
         "type": "collection",

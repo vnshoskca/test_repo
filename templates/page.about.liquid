@@ -1,0 +1,56 @@
+<main class="aboutUs">
+  <h2 class="subHeadline">店舗情報</h2>
+
+  <section class="aboutUs__sec01 sec">
+
+    <div class="shops">
+      <a href="#" class="shop">
+        <img src="{{ map-1.jpeg | asset_img_url: '3000x'}}" alt="">
+        <div class="shop__info">
+          <h2>ショップ1</h2>
+          <p class="tel">TEL： 020-0000-1111</p>
+          <p class="workTime">営業時間：<span>11:00~21:00(LO20:00)</span>
+          </p>
+          <p class="holiday">定休日：水曜日</p>
+        </div>
+      </a>
+      <a href="#" class="shop">
+        <img src="{{ map-1.jpeg | asset_img_url: '3000x'}}" alt="">
+        <div class="shop__info">
+          <h2>ショップ2</h2>
+          <p class="tel">TEL： 020-0000-1111</p>
+          <p class="workTime">営業時間：<span>11:00~21:00(LO20:00)</span>
+          </p>
+          <p class="holiday">定休日：水曜日</p>
+        </div>
+      </a>
+      <a href="#" class="shop">
+        <img src="{{ map-1.jpeg | asset_img_url: '3000x'}}" alt="">
+        <div class="shop__info">
+          <h2>ショップ3</h2>
+          <p class="tel">TEL： 020-0000-1111</p>
+          <p class="workTime">営業時間：<span>11:00~21:00(LO20:00)</span>
+          </p>
+          <p class="holiday">定休日：水曜日</p>
+        </div>
+      </a>
+      <a href="#" class="shop">
+        <img src="{{ map-1.jpeg | asset_img_url: '3000x'}}" alt="">
+        <div class="shop__info">
+          <h2>ショップ4</h2>
+          <p class="tel">TEL： 020-0000-1111</p>
+          <p class="workTime">営業時間：<span>11:00~21:00(LO20:00)</span>
+          </p>
+          <p class="holiday">定休日：水曜日</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="recommend sec">
+    <h2>おすすめ商品</h2>
+    {% section 'section-collection' %}
+
+  </section>
+
+</main>
