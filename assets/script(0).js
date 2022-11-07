@@ -153,14 +153,4 @@ $('.qtybox .btnqty').on('click', function(){
 	}
 	qty = (isNaN(qty))?1:qty;
 	$(this).parent('.qtybox').find('.quantity-input').val(qty);
-  }); 
-
-    // 増減の制御
-$('.btn-minus').on('click', function(e) {
-    var input = $(e.target).closest('.line_item_count').find('input');
-    input[0]['stepDown']();
-});
-$('.btn-plus').on('click', function(e) {
-    var input = $(e.target).closest('.line_item_count').find('input');
-    input[0]['stepUp']();
-});
+  });

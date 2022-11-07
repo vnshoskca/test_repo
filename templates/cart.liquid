@@ -1,0 +1,65 @@
+<head>
+  <link rel="stylesheet" href="cart-style.css">
+</head>
+<div class="section_container">
+  <div>
+    <div class="section_title">カートの商品</div>
+    <form method="post" class="cart_form">
+      <div class="cart_items_box">
+
+        {% for line_item in cart.items%}
+
+          <div class="line_item">
+
+            <div class="line_item_inner">
+              <img src="{{ line_item.image | img_url: '3000x' }}" alt="">
+              <div class="line_info_inner">
+                <div class="line_item_name">{{ line_item.product.title }}</div>
+                <div class="option_item_name">
+                  {% for option in line_item.options_with_values %}
+
+                    {{ option.name }}/{{ option.value }}
+
+                  {% endfor %}
+                </div>
+                <div class="line_item_count">
+                  <button class="quantity__button no-js-hidden btn-minus" name="minus" type="button">
+                    <span class="visually-hidden">
+                      {{ 'products.product.quantity.decrease' | t: product:line_item.product.title | escape }}
+                    </span>
+                    {% render 'icon-minus' %}
+                  </button>
+                  <input class="quantity__input" type="number" name="updates[]" value="{{ line_item.quantity }}" min="0" id="Qunatity-{{ line_item.index | plus:1 }}" data-index="Qunatity-{{ line_item.index | plus:1 }}">
+                  <button class="quantity__button no-js-hidden btn-plus" name="plus" type="button">
+                    <span class="visually-hidden">
+                      {{ 'products.product.quantity.increase' | t: product:line_item.product.title | escape }}
+                    </span>
+                    {% render 'icon-plus' %}
+                  </button>
+                </div>
+                <div class="line_item_price">{{ line_item.final_line_price | money }}(税込)</div>
+              </div>
+            </div>
+            <a class="delete_btn" href="/cart/change?line={{ forloop.index }}&quantity=0" rel=#>
+              <span class="fas"></span>削除</a>
+          </div>
+
+        {% endfor %}
+
+        <div class="cart_total_price">
+          合計金額 {{ cart.total_price | money }}(税込)
+        </div>
+        <p class="continue-shopping">
+          <a href="/collections/all">ショッピングを続ける<span>→</span>
+          </a>
+        </p>
+        <div class="cart_btn_box">
+          <input type="submit" name="update" class="cart_checkout_btn" value="カートを更新">
+          <input type="submit" name="checkout" class="cart_checkout_btn" value="購入に進む">
+        </div>
+
+
+      </form>
+    </div>
+  </div>
+</div>
