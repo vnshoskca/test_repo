@@ -1,9 +1,139 @@
-{% section 'section-slideshow' %}
-<section class="2022_new_collection sec">
+<div class="faq-list">
+<div class="faq-list2">
+    <div class="faq-list3 question question1">質問</div>
+    <div class="faq-list3 answer answer1">お答えします。</div>
+</div>
+<div class="faq-list2">
+    <div class="faq-list3 question question2">Question</div>
+    <div class="faq-list3 answer answer2">I will answer the question.</div>
+</div>
+</div>
+
+
+{%- comment -%}フェイドイン＆フェイドアウト型スライダー
+  <div class="my-slider">
+  <ul class="my-items">
+  <li class="my-item current"><img src="https://codeisle.info/blog/wp-content/uploads/2018/12/mt-fuji-3776.jpg"></li>
+  <li class="my-item"><img src="https://codeisle.info/blog/wp-content/uploads/2018/12/kilimanjaro-5895.jpg"></li>
+  <li class="my-item"><img src="https://codeisle.info/blog/wp-content/uploads/2018/12/aconcagua-6962.jpg"></li>
+  <li class="my-item"><img src="https://codeisle.info/blog/wp-content/uploads/2018/12/matterhorn-4478.jpg"></li>
+  </ul>
+  <div class="my-buttons">
+  <button type=button id=prev class="my-button prev"></button>
+  <button type=button id=next class="my-button next"></button>
+  </div>
+  <div class="my-dots">
+  <button type=button class="my-dot current"></button>
+  <button type=button class="my-dot"></button>
+  <button type=button class="my-dot"></button>
+  <button type=button class="my-dot"></button>
+  </div>
+  </div>
+{%- endcomment -%}
+
+{%- comment -%}
+  画像スライダー Swiper の使い方・設定(HTML, CSS, JavaScript)
+{%- endcomment -%}
+{%- comment -%}
+  https://www.rectus.co.jp/archives/496
+{%- endcomment -%}
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">Slide 1</div>
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div>
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+  <!-- Add Arrows -->
+  <div class="swiper-button-next"> </div>
+  <div class="swiper-button-prev"> </div>
+</div>
+
+
+
+
+
+{%- comment -%}
+  画像スライダーのライブラリはslickよりSwiperの方がおすすめなたった１つの理由
+{%- endcomment -%}
+{%- comment -%}
+  https://templete-press.com/blog/swiper-vs-slick/#Swiper-2
+{%- endcomment -%}
+{%- comment -%}
+  <div class="swiper-container">
+  <ul class="swiper-wrapper">
+  <li class="swiper-slide slide1"><img src="https://codeisle.info/blog/wp-content/uploads/2018/12/mt-fuji-3776.jpg"></li>
+  <li class="swiper-slide slide2"><img src="https://codeisle.info/blog/wp-content/uploads/2018/12/kilimanjaro-5895.jpg"></li>
+  <li class="swiper-slide slide3"><img src="https://codeisle.info/blog/wp-content/uploads/2018/12/aconcagua-6962.jpg"></li>
+  <li class="swiper-slide slide3"><img src="https://codeisle.info/blog/wp-content/uploads/2018/12/matterhorn-4478.jpg"></li>
+  </ul>
+  <div class="swiper-button swiper-button-prev"></div>
+  <div class="swiper-button swiper-button-next"></div>
+  </div>
+{%- endcomment -%}
+
+{%- comment -%}
+  CSSとJavaScriptでスワイプ操作にも対応した簡単なスライドを自作する
+{%- endcomment -%}
+{%- comment -%}
+  https://blog.ver001.com/css-javascript-slide-swipe/
+{%- endcomment -%}
+{%- comment -%}
+  <div class="hscroll">
+  <ul>
+  <li><a href="sample (1).jpg"><img src="https://codeisle.info/blog/wp-content/uploads/2018/12/mt-fuji-3776.jpg"></a></li>
+  <li><a href="sample (2).jpg"><img src="https://codeisle.info/blog/wp-content/uploads/2018/12/kilimanjaro-5895.jpg"></a></li>
+  <li><a href="sample (3).jpg"><img src="https://codeisle.info/blog/wp-content/uploads/2018/12/aconcagua-6962.jpg"></a></li>
+  <li><a href="sample (4).jpg"><img src="https://codeisle.info/blog/wp-content/uploads/2018/12/matterhorn-4478.jpg"></a></li>
+  </ul>
+  <span class="arrow left"></span>
+  <span class="arrow right"></span>
+  </div>
+{%- endcomment -%}
+
+{%- comment -%}
+  https://noauto-nolife.com/post/javascript-carousel-origin-slider/
+{%- endcomment -%}
+{%- comment -%}
+  <div class="preview_control_area">
+  <div class="control_button previous_button">Prev</div>
+  <div class="data_preview_area">
+  <div class="data_preview_frame"><div class="data_preview_content"><img src="https://codeisle.info/blog/wp-content/uploads/2018/12/mt-fuji-3776.jpg"></div></div>
+  <div class="data_preview_frame"><div class="data_preview_content"><img src="https://codeisle.info/blog/wp-content/uploads/2018/12/kilimanjaro-5895.jpg"></div></div>
+  <div class="data_preview_frame"><div class="data_preview_content"><img src="https://codeisle.info/blog/wp-content/uploads/2018/12/aconcagua-6962.jpg"></div></div>
+  <div class="data_preview_frame"><div class="data_preview_content"><img src="https://codeisle.info/blog/wp-content/uploads/2018/12/matterhorn-4478.jpg"></div></div>   
+  </div>
+  <div class="control_button next_button">Next</div>
+  </div>
+{%- endcomment -%}
+
+
+{%- comment -%}
+  <div class="my-slider2">
+  <ul class="my-items2">
+  <li class="my-item2 current2"><img src="https://codeisle.info/blog/wp-content/uploads/2018/12/mt-fuji-3776.jpg"></li>
+  <li class="my-item2"><img src="https://codeisle.info/blog/wp-content/uploads/2018/12/kilimanjaro-5895.jpg"></li>
+  <li class="my-item2"><img src="https://codeisle.info/blog/wp-content/uploads/2018/12/aconcagua-6962.jpg"></li>
+  <li class="my-item2"><img src="https://codeisle.info/blog/wp-content/uploads/2018/12/matterhorn-4478.jpg"></li>
+  </ul>
+  <div class="my-buttons2">
+  <button type=button id=prev2 class="my-button2 prev2"></button>
+  <button type=button id=next2 class="my-button2 next2"></button>
+  </div>
+  </div>
+{%- endcomment -%}
+
+
+
+
+  {%- comment -%} {% section 'section-slideshow' %} {%- endcomment -%}
+  {% section 'section-collection-list' %}
+  <section class="2022_new_collection sec">
   <h2>2022 NEW COLLECTION "APPLAUSE"</h2>
-{% section 'section-collection' %}
-{% section 'section-product' %}
-{% section 'section-collection-list' %}
-{% section 'section-about' %}
-{% section 'section-special' %}
-{% section 'section-category' %}
+  {% section 'section-collection' %}
+  {% section 'section-product' %}
+  
+  {% section 'section-about' %}
+  {% section 'section-special' %}
+  {% section 'section-category' %}

@@ -24,7 +24,9 @@
           <div class="product__detail__main">
             <p class="maison">{{ product.vendor }}</p>
             <h2>{{ product.title }}</h2>
-            <p class="price">{{ product.price | money }}</p>
+            <p class="price price_texless">
+              <span style="font-size: 24px; font-weight: bold;">{{ product.price | divided_by :1.1 | money }}</span>（税抜）</p>
+            <p class="price">{{ product.price | money }}（税込）</p>
           </div>
           <div class="product__detail__text">
             <p>{{ product.content }}</p>

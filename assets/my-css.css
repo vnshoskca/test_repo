@@ -1,0 +1,454 @@
+/************************/ 
+/*トグル*/
+/************************/ 
+.faq-list{
+  margin: 50px;
+}
+.faq-list3{
+  /*
+  margin-top: 7px;
+  margin-bottom: 7px;
+  */
+  padding: 7px;
+}
+.question{
+  background-color: cyan;
+}
+.answer{
+  display: none;
+  height: 500px;
+  background-color: rgb(233, 13, 222);
+  
+}
+
+/************************/ 
+/*スライダー：opacity遷移*/
+/************************/ 
+.my-slider{
+    width: 100%;
+    position:relative;
+  }
+  .my-items{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 56.25%;
+  }
+  .my-item{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    
+    opacity: 0;
+    
+    /*
+    display: none;
+    */
+    transition: opacity .6s ease-in-out;
+    text-align: center;
+  }
+  .current{
+    
+    opacity: 1;
+    
+    /*
+    display: block;
+    */
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .my-buttons{
+    position:absolute;
+    z-index: 1;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .my-button{
+    width:32px;
+    height:32px;
+    border:none;
+    outline:none;
+    padding:0;
+    background:transparent center no-repeat;
+    cursor:pointer;
+    opacity:.4;
+}
+.my-buttons .prev{
+      background-image: url(https://codeisle.info/blog/wp-content/uploads/2018/12/ico_next_b32.png);
+}
+    .my-buttons .next{
+      background-image:url(https://codeisle.info/blog/wp-content/uploads/2018/12/ico_next_b32-1.png);
+}
+    .my-buttons :hover{
+      opacity:.8;
+}
+  
+  .my-dots{
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+.my-dot{
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    padding: 0;
+    background: blue;
+    cursor: pointer;
+    opacity: .5;
+    transition: opacity .4s ease-in-out;
+  }
+.my-dots :nth-child(n+2){
+      margin-left: 5px;
+}
+.my-dots .current{
+      opacity: 1;
+}
+/***************************/ 
+/*スライダー：スライド横に遷移*/
+/****************************/ 
+.my-slider2{/*preview_control_area*/
+    margin-top: 50px;
+    /*
+    width: 100%;
+    */
+    
+    position:relative;
+    
+  }
+  .my-items2{/*data_preview_area*/ 
+
+    /*
+    position: relative;
+    */
+    /*
+    width: 100%;
+    */
+    /*
+    padding-bottom: 56.25%;
+*/
+    overflow: auto;
+    white-space:nowrap;
+    word-break: break-all;
+    /* スクロールバーの除去 Edge,Firefox*/
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  /* スクロールバーの除去 Chrome Safari */
+.data_preview_area::-webkit-scrollbar {
+    display:none;
+}
+  .my-item2{/*data_preview_frame*/
+    /*
+    position: absolute;
+   
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+ */
+ 
+    width:calc(100% / 4); 
+    
+    display:inline-block;
+    white-space:normal;
+    vertical-align:middle;
+    
+    /*
+    transition: opacity .6s ease-in-out;
+    */
+    text-align: center;
+  }
+  /*
+  .current2{    
+    display: block;
+  }
+  */
+  .my-item2 img{/*"data_preview_content*/
+    /*
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    */
+    display:block;
+    overflow-y:hidden;
+  }
+
+  .my-buttons2{
+    position:absolute;
+    z-index: 1;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .my-button2{
+    width:32px;
+    height:32px;
+    border:none;
+    outline:none;
+    padding:0;
+    background:transparent center no-repeat;
+    cursor:pointer;
+    opacity:.4;
+}
+.my-buttons2 .prev2{
+      background-image: url(https://codeisle.info/blog/wp-content/uploads/2018/12/ico_next_b32.png);
+}
+.my-buttons2 .next2{
+      background-image:url(https://codeisle.info/blog/wp-content/uploads/2018/12/ico_next_b32-1.png);
+}
+.my-buttons2 :hover{
+      opacity:.8;
+}
+
+/********************************************************************/
+/**https://noauto-nolife.com/post/javascript-carousel-origin-slider/**/
+/* slider system */
+
+/* ボタン装飾 */
+.preview_control_area {/*my-slider*/
+    display:flex;
+    align-items: stretch;
+}
+.data_preview_area {/*my-items*/
+
+    /* button_width * 2 */
+    width:calc(100% - 3rem*2);
+
+    font-size:0;
+    margin:0.5rem 0;
+    overflow-x:auto;
+    white-space:nowrap;
+    word-break: break-all;
+
+    /* スクロールバーの除去 Edge,Firefox*/
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+/* スクロールバーの除去 Chrome Safari */
+.data_preview_area::-webkit-scrollbar {
+    display:none;
+}
+.data_preview_frame {/*my-item*/
+    font-size:1rem;
+    /*
+    width:calc(100% / 5); 
+    */
+    width: 100%;
+    height:100%;
+    display:inline-block;
+    white-space:normal;
+    vertical-align:middle;
+}
+.data_preview_content {/*img*/
+    display:block;
+    margin:0 0.5rem;
+
+    font-weight:bold;
+    overflow-y:hidden;
+}
+
+
+/* ボタン装飾 */
+.control_button {
+    /* button_width */
+    width:3rem;
+
+    background:white;
+    border:solid 0.1rem black;
+    border-radius:0.25rem;
+    padding:0.5rem;
+    margin:0 0.25rem;
+
+    cursor:pointer;
+    transition:0.2s;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.control_button:hover {
+    background:black;
+    color:white;
+    transition:0.2s;
+}
+
+/* スマホ・タブレット表示時に*/
+@media (max-width:800px){
+    /* 1ページに表示する個数で割る */
+    .data_preview_frame {
+        width:calc(100% / 3); 
+    }   
+
+    /* スマホ表示時、ボタンは画面幅を圧迫するので、消す */
+    .control_button {
+        display:none;
+    }
+
+    /* スクロールバーをデフォルトに。 */
+    .data_preview_area {
+        width:100%;
+
+        -ms-overflow-style: auto;
+        scrollbar-width: auto;
+    }
+    .data_preview_area::-webkit-scrollbar {
+        display:initial;
+    }
+}
+
+/*CSSとJavaScriptでスワイプ操作にも対応した簡単なスライドを自作する*/
+/*https://blog.ver001.com/css-javascript-slide-swipe/*/
+.hscroll {
+	width:500px;
+	height:500px;
+	position:relative;
+	border:1px solid lightgray;
+}
+.hscroll ul {
+	padding:0;
+	margin:0;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	white-space:nowrap;
+	scroll-snap-type:x mandatory;
+	scroll-behavior:smooth;
+}
+.hscroll img {
+	width:100%;
+	height:100%;
+	object-fit:contain;
+}
+.hscroll li {
+	list-style:none;
+	display:inline-block;
+	scroll-snap-align:center;
+	width:100%;
+	height:100%;
+}
+.arrow {
+	top:0;
+	position:absolute;
+	width:8%;
+	height:100%;
+	background:rgba(255,255,255,0.3);
+	cursor:pointer;
+}
+.arrow:before {
+	content:'';
+	position:absolute;
+	width:10px;
+	height:10px;
+	border-left:4px solid gray;
+	border-bottom:4px solid gray;
+}
+.left {
+	left:0px;
+}
+.left:before {
+	top:calc(50% - 10px);
+	left:calc(50% - 4px);
+	transform:rotate(45deg);
+}
+.right {
+	right:0;
+}
+.right:before {
+	top:calc(50% - 10px);
+	right:calc(50% - 6px);
+	transform:rotate(-135deg);
+}
+@media screen and (max-width:480px) {
+	.hscroll ul {
+		overflow-x:auto;
+	}
+}
+
+/**{%- comment -%}  {%- endcomment -%}
+{%- comment -%}  {%- endcomment -%}**/
+.swiper-container {
+  width: 100%;
+  height: 350px;
+  
+  position: relative;
+  
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: blueviolet;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  z-index: 10;
+  transform: translate(0%, -50%);
+  margin-top: 0;
+  /*
+  background: red;
+  */
+}
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: .35;
+  cursor: auto;
+  pointer-events: none
+    }
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  /*
+  position: relative;
+  */
+  font-family: "Font Awesome 5 Free", sans-serif;
+  opacity: 1;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 46px;
+}
+.swiper-button-prev::after {
+  content: "\f104";
+}
+.swiper-button-next::after {
+  content: "\f105";
+}
+.swiper-button-prev:hover:after,
+.swiper-button-next:hover:after{
+  color: red;
+}
+
