@@ -4,7 +4,7 @@
   <div class="collection-wrap flex">
 
     {% assign collection = collections[section.settings.toppage_collection] %}
-    {% paginate collection.products by 3 %}
+    {% paginate collection.products by 20 %}
       {% for product in collection.products %}
         <a href="{{ product.url }}" class="product_card">
           <img src="{{ product.featured_image.src | img_url: '3000x' }}" alt="">

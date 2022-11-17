@@ -228,7 +228,7 @@
       "section-collection": {
         "type": "section-collection",
         "settings": {
-          "toppage_collection": "all_products"
+          "toppage_collection": "womens"
         }
       },
       "footer-custom": {
@@ -240,37 +240,6 @@
         "type": "section-product",
         "settings": {
           "toppage_product": "daily-air-max-ladys"
-        }
-      },
-      "section-collection-list": {
-        "type": "section-collection-list",
-        "blocks": {
-          "bbaf2d73-585b-4480-b308-bfd3ad955364": {
-            "type": "featured_collection",
-            "settings": {
-              "toppage_collection": "all_products"
-            }
-          }
-        },
-        "block_order": [
-          "bbaf2d73-585b-4480-b308-bfd3ad955364"
-        ],
-        "settings": {
-        }
-      },
-      "section-about": {
-        "type": "section-about",
-        "settings": {
-        }
-      },
-      "section-special": {
-        "type": "section-special",
-        "settings": {
-        }
-      },
-      "section-category": {
-        "type": "section-category",
-        "settings": {
         }
       }
     },
