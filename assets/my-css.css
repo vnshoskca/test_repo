@@ -1,3 +1,7 @@
+.kinou{
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
 /************************/ 
 /*送料無料のタグ/
 /************************/ 
@@ -26,7 +30,11 @@ vertical-align: middle;
 /*トグル*/
 /************************/ 
 .faq-list{
-  margin: 30px;
+  margin: 0 auto;
+  width: 80%;
+}
+.faq-list p{
+  text-align: center;
 }
 .faq-list2{
   /*
@@ -51,14 +59,14 @@ vertical-align: middle;
   
 }
 
-/************************/ 
-/*スライダー：opacity遷移*/
-/************************/ 
+/*****************************************************/ 
+/*スライダー：opacityでフェイドイン＆フェイドアウト型遷移*/
+/****************************************************/ 
 .my-slider{
-    width: 100%;
+    width: 80%;
+    height: auto;
     position:relative;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 0 auto;
   }
   .my-items{
     position: relative;
@@ -72,9 +80,7 @@ vertical-align: middle;
     left: 0px;
     width: 100%;
     height: 100%;
-    
     opacity: 0;
-    
     /*
     display: none;
     */
@@ -82,9 +88,7 @@ vertical-align: middle;
     text-align: center;
   }
   .current{
-    
     opacity: 1;
-    
     /*
     display: block;
     */
@@ -422,11 +426,11 @@ vertical-align: middle;
 /**{%- comment -%}  {%- endcomment -%}
 {%- comment -%}  {%- endcomment -%}**/
 .swiper-container {
-  width: 100%;
-  height: 350px;
-  
+  width: 80%;
+  height: 500px;
   position: relative;
-  
+  overflow: hidden;
+  margin: 0 auto;
 }
 .swiper-slide {
   text-align: center;
