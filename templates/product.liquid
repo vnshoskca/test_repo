@@ -4,6 +4,8 @@
     <div class="popular_product flex">
       <div class="product__post">
 
+
+
         <div class="ProductImage">
 
           <ul class="gallery">
@@ -24,6 +26,15 @@
           <div class="product__detail__main">
             <p class="maison">{{ product.vendor }}</p>
             <h2>{{ product.title }}</h2>
+
+            {% for tag in product.tags %}
+              {% if tag contains "送料無料" %}
+                <div class="tag_muryou">
+                  {{ tag }}
+                </div>
+              {% endif %}
+            {% endfor %}
+
             <p class="price price_texless">
               <span style="font-size: 24px; font-weight: bold;">{{ product.price | divided_by :1.1 | money }}</span>（税抜）</p>
             <p class="price">{{ product.price | money }}（税込）</p>

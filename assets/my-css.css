@@ -1,8 +1,38 @@
 /************************/ 
+/*送料無料のタグ/
+/************************/ 
+.tag_muryou{
+  
+  width: 100%;
+  height: 100%;
+  
+  /*
+  padding: 3px;
+  */
+  margin-top: 15px;
+  color: white;
+  background: red;
+  border-radius: 10px;
+font-size: 16px;
+font-weight: bold;
+/*
+vertical-align: middle;
+  text-align: center;
+  */
+}
+
+
+/************************/ 
 /*トグル*/
 /************************/ 
 .faq-list{
-  margin: 50px;
+  margin: 30px;
+}
+.faq-list2{
+  /*
+  border: 2px solid #000000;
+  */
+  margin-bottom: 2px;
 }
 .faq-list3{
   /*
@@ -12,7 +42,7 @@
   padding: 7px;
 }
 .question{
-  background-color: cyan;
+  background-color: rgb(39, 55, 199);
 }
 .answer{
   display: none;
@@ -27,6 +57,8 @@
 .my-slider{
     width: 100%;
     position:relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
   .my-items{
     position: relative;
