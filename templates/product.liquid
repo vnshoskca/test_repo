@@ -10,12 +10,12 @@
 
           <ul class="gallery">
             {% for image in product.images %}
-              <li><img src="{{ image.src | img_url | 'large' }}" alt=""></li>
+              <li><img src="{{ image.src | img_url | large }}" alt=""></li>
             {% endfor %}
           </ul>
           <ul class="choice-btn flex slideItemImage">
             {% for image in product.images %}
-              <li><img src="{{ image.src | img_url | 'large' }}" alt=""></li>
+              <li><img src="{{ image.src | img_url | large }}" alt=""></li>
             {% endfor %}
           </ul>
         </div>
@@ -110,4 +110,16 @@
     {% section 'section-collection' %}
 
   </section>
-</main>
+</main>{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{{ image.src | img_url | 'large' }}"
+  to: "{{ image.src | img_url | large }}"
+  position: 271..304
+- from: "{{ image.src | img_url | 'large' }}"
+  to: "{{ image.src | img_url | large }}"
+  position: 488..521
+{%- endcomment -%}
